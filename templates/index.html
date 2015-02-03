@@ -1,5 +1,5 @@
 <DOCTYPE html>
-<!--{% load staticfiles %}-->
+{% load staticfiles %}
 
 <html>
 <head>
@@ -8,7 +8,16 @@
   <script src="{% static "js/script.js" %}"></script>
 </head>
 <body>
-  <h1> {{ mssg }} </h1>
+  {% if contacts %}
+
+    {% for contact in contacts %}
+  <h1> {{ contact.email }} </h1>
+  <P> {{ contact.message }} </P>
+    {% endfor %}
+
+  {% else %}
+    there is nothing
+  {% endif %}
   <img src="{% static "images/a.jpg" %}"/>
 </body>
 </html>
