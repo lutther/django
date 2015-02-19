@@ -8,16 +8,16 @@
   <script src="{% static "js/script.js" %}"></script>
 </head>
 <body>
-  {% if contacts %}
 
-    {% for contact in contacts %}
-  <h1> {{ contact.email }} </h1>
-  <P> {{ contact.message }} </P>
+    {% for prov in prov %}
+  <li> 
+    <li>{{ prov.name }}</li>
+  </li>
+
     {% endfor %}
 
-  {% else %}
-    there is nothing
-  {% endif %}
-  <img src="{% static "images/a.jpg" %}"/>
+    {% for bus in bus %}
+    <p>{{ bus.name }}</p>
+    {% endfor %}
 </body>
 </html>

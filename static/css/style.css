@@ -2,9 +2,10 @@ body {
 	margin: 0;
 }
 
-h1 {
+p {
 	color: navy;
-	text-align: right;
+	width: 60%;
+	float: right;
 }
 
 img {
